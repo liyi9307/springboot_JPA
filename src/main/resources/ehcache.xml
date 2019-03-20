@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
+    <diskStore path="java.io.tmpdir/ehcache"/>
+    <defaultCache
+        maxElementsInMemory="500"
+        eternal="false"
+        timeToIdleSeconds="500"
+        timeToLiveSeconds="500"
+        overflowToDisk="true"
+    />
+
+    <cache name="cache1"
+           maxElementsInMemory="500"
+           eternal="false"
+           timeToIdleSeconds="500"
+           timeToLiveSeconds="500"
+           overflowToDisk="true"/>
+
+    <!-- This cache contains 500 elements. Elements will always be held in memory.-->
+    <cache name="cache2"
+           maxElementsInMemory="500"
+           eternal="true"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="0"
+           overflowToDisk="false"/>
+</ehcache>
